@@ -30,7 +30,7 @@ namespace ZombieShooter
             var colliders = Physics.OverlapSphere(MeleePoint.Value.position, MeleeRadius);
             foreach (var collider in colliders)
             {
-                var entity = collider.gameObject.GetComponentInParent<Entity>();
+                var entity = collider.gameObject.GetComponentInParent<IEntity>();
                 if(entity == null)
                     continue;
                 

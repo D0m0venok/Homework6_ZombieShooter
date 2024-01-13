@@ -1,4 +1,5 @@
 using System;
+using Atomic;
 
 namespace ZombieShooter
 {
@@ -20,11 +21,11 @@ namespace ZombieShooter
         
         public virtual void OnEnable()
         {
+            HealthSection.IsAlive.Subscribe(OnIsAliveValueChanged);
+            
             HealthSection.OnEnable();
             MoveSection.OnEnable();
             AttackSection.OnEnable();
-            
-            HealthSection.IsAlive.Subscribe(OnIsAliveValueChanged);
         }
         public virtual void OnDisable()
         {

@@ -1,3 +1,4 @@
+using Sirenix.OdinInspector;
 using UnityEngine;
 using Zenject;
 
@@ -10,12 +11,21 @@ namespace ZombieShooter
         [SerializeField] private float _spawnDelay = 2f;
         [SerializeField] private Transform[] _spawnPositions;
 
+        private ZombieManager _zombieManager;
         public override void InstallBindings()
         {
             Container.Bind<ZombiePool>().AsSingle().WithArguments(_activeContainer, _disableContainer);
             Container.Bind<ZombieManager>().AsSingle();
             Container.BindInterfacesAndSelfTo<ZombiePeriodSpawner>().AsCached().WithArguments(_spawnDelay);
             Container.Bind<ZombiePositions>().AsSingle().WithArguments(_spawnPositions);
+
+            _zombieManager = Container.Resolve<ZombieManager>();
+        }
+
+        [Button]
+        public void SpawnZombie()
+        {
+            _zombieManager.SpawnEnemy();
         }
     }
 }

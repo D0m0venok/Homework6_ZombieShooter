@@ -1,13 +1,14 @@
+using Atomic;
 using UnityEngine;
 
 namespace ZombieShooter
 {
     public sealed class MoveController : IGameStartListener, IGameFinishListener
     {
-        private readonly Entity _entity;
+        private readonly IEntity _entity;
         private readonly IMoveInput _moveInput;
         
-        public MoveController(Entity entity, IMoveInput moveInput)
+        public MoveController(IEntity entity, IMoveInput moveInput)
         {
             _entity = entity;
             _moveInput = moveInput;

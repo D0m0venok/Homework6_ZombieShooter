@@ -5,9 +5,9 @@ namespace ZombieShooter
     public sealed class DeathMechanics
     {
         private readonly IAtomicVariable<bool> _isAlive;
-        private readonly IAtomicEvent<Entity> _death;
+        private readonly IAtomicEvent<IEntity> _death;
 
-        public DeathMechanics(IAtomicVariable<bool> isAlive, IAtomicEvent<Entity> death)
+        public DeathMechanics(IAtomicVariable<bool> isAlive, IAtomicEvent<IEntity> death)
         {
             _isAlive = isAlive;
             _death = death;
@@ -23,7 +23,7 @@ namespace ZombieShooter
             _death.Unsubscribe(OnDeath);
         }
 
-        private void OnDeath(Entity entity)
+        private void OnDeath(IEntity entity)
         {
             if (!_isAlive.Value)
                 return;    

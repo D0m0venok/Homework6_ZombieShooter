@@ -111,7 +111,7 @@
      <Compile Include="Assets\Game\Scripts\Sections\AttackSection.cs" />
      <Compile Include="Assets\Game\Scripts\Zombie\Agents\ZombieAttackAgent.cs" />
      <Compile Include="Assets\Game\Scripts\Sections\FireSection.cs" />
-     <Compile Include="Assets\Game\Scripts\Common\Entity.cs" />
+     <Compile Include="Assets\Game\Extensions\Atomic\Entity\Entity.cs" />
      <Compile Include="Assets\Game\Scripts\UI\CharacterUI.cs" />
      <Compile Include="Assets\Game\Scripts\Components\IComponents.cs" />
      <Compile Include="Assets\Game\Scripts\GameManager\IGameListenerProvider.cs" />
@@ -125,11 +125,15 @@
      <Compile Include="Assets\Game\Scripts\Zombie\ZombieEntity.cs" />
      <Compile Include="Assets\Game\Scripts\GameManager\GameManagerInstaller.cs" />
      <Compile Include="Assets\Game\Scripts\Character\CharacterAudio.cs" />
+     <Compile Include="Assets\Game\Extensions\Atomic\Entity\EntityBehaviour.cs" />
+     <Compile Include="Assets\Game\Extensions\Atomic\Entity\IMonoInterfaces.cs" />
+     <Compile Include="Assets\Game\Extensions\Atomic\Entity\IEntity.cs" />
      <Folder Include="Assets" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <Folder Include="Assets\Game\Scripts\Bullets" />
      <Folder Include="Assets\AssetsPack\Epic Toon FX" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+     <Folder Include="Assets\Game\Extensions\Atomic\Entity" />
      <Folder Include="Assets\Game\Scripts" />
      <Folder Include="Assets\TextMesh Pro\Sprites" />
      <Folder Include="Assets\Game\Scripts\Actions" />
@@ -157,7 +161,6 @@
      <Folder Include="Assets\Game\Scripts\Input\Input" />
      <Folder Include="Assets\TextMesh Pro" />
      <Folder Include="Assets\AssetsPack\Soldier\Models\Weapons" />
-     <Folder Include="Assets\Game\Scripts\Entity" />
      <Folder Include="Assets\Game\Scripts\Components" />
      <Folder Include="Assets\AssetsPack\Zombie\Materials" />
      <Folder Include="Assets\Game\Scripts\Input" />

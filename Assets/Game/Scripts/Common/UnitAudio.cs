@@ -1,4 +1,5 @@
 using System;
+using Atomic;
 using UnityEngine;
 
 namespace ZombieShooter
@@ -29,7 +30,7 @@ namespace ZombieShooter
         {
             _hitSource.PlayOneShot(_hitSource.clip);
         }
-        private void OnDeath(Entity entity)
+        private void OnDeath(IEntity entity)
         {
             _hitSource.PlayOneShot(_hitSource.clip);
         }

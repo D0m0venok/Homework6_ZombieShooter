@@ -4,9 +4,9 @@ namespace ZombieShooter
 {
     public sealed class DeathComponent : IDeathComponent
     {
-        public IAtomicEvent<Entity> DeathEvent { get; }
+        public IAtomicEvent<IEntity> DeathEvent { get; }
         
-        public DeathComponent(IAtomicEvent<Entity> deathEvent)
+        public DeathComponent(IAtomicEvent<IEntity> deathEvent)
         {
             DeathEvent = deathEvent;
         }

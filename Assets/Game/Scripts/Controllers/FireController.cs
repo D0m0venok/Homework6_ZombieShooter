@@ -1,11 +1,13 @@
+using Atomic;
+
 namespace ZombieShooter
 {
     public sealed class FireController : IGameStartListener, IGameFinishListener
     {
-        private readonly Entity _entity;
+        private readonly IEntity _entity;
         private readonly IFireInput _fireInput;
         
-        public FireController(Entity entity, IFireInput fireInput)
+        public FireController(IEntity entity, IFireInput fireInput)
         {
             _entity = entity;
             _fireInput = fireInput;
@@ -23,9 +25,7 @@ namespace ZombieShooter
         private void Fire()
         {
             if (_entity.TryGetEntityComponent(out IAttackComponent fireComponent))
-            {
                 fireComponent.Attack();
-            }
         }
     }
 }

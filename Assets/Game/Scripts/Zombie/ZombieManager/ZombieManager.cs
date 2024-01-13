@@ -29,7 +29,7 @@ namespace ZombieShooter
                 deathComponent.DeathEvent.Subscribe(OnKilled);
         }
 
-        private void OnKilled(Entity entity)
+        private void OnKilled(IEntity entity)
         {
             _kills.Value++;
             var zombie = (ZombieEntity)entity;

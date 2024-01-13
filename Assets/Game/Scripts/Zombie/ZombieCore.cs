@@ -48,7 +48,7 @@ namespace ZombieShooter
             AgentSection.Enable.Value = isAlive;
             Collider.Value.enabled = isAlive;
         }
-        private void OnTargetDeath(Entity entity)
+        private void OnTargetDeath(IEntity entity)
         {
             OnIsAliveValueChanged(false);
         }

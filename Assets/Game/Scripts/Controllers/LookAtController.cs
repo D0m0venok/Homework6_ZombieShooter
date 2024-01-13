@@ -1,13 +1,14 @@
+using Atomic;
 using UnityEngine;
 
 namespace ZombieShooter
 {
     public sealed class LookAtController : IGameStartListener, IGameFinishListener
     {
-        private readonly Entity _entity;
+        private readonly IEntity _entity;
         private readonly IMousePositionsInput _mousePositions;
         
-        public LookAtController(Entity entity, IMousePositionsInput mousePositions)
+        public LookAtController(IEntity entity, IMousePositionsInput mousePositions)
         {
             _entity = entity;
             _mousePositions = mousePositions;

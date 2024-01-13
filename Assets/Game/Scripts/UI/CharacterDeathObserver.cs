@@ -1,10 +1,12 @@
+using Atomic;
+
 namespace ZombieShooter
 {
     public sealed class CharacterDeathObserver
     {
         private readonly EndGamePopup _endGamePopup;
 
-        public CharacterDeathObserver(Entity entity, EndGamePopup endGamePopup)
+        public CharacterDeathObserver(IEntity entity, EndGamePopup endGamePopup)
         {
             _endGamePopup = endGamePopup;
 
@@ -13,7 +15,7 @@ namespace ZombieShooter
         }
 
 
-        private void OnCharacterDeath(Entity entity)
+        private void OnCharacterDeath(IEntity entity)
         {
             _endGamePopup.Show();
             

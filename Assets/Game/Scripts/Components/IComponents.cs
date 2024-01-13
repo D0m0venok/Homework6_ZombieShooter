@@ -40,6 +40,6 @@ namespace ZombieShooter
 
     public interface IDeathComponent : IComponent
     {
-        public IAtomicEvent<Entity> DeathEvent { get; }
+        public IAtomicEvent<IEntity> DeathEvent { get; }
     }
 }

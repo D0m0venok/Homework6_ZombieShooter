@@ -7,10 +7,10 @@ namespace ZombieShooter
     {
         private readonly IAtomicVariable<int> _hitPoints;
         private readonly IAtomicEvent<int> _hitEvent;
-        private readonly IAtomicAction<Entity> _deathEvent;
-        private readonly Entity _entity;
+        private readonly IAtomicAction<IEntity> _deathEvent;
+        private readonly IEntity _entity;
 
-        public HitMechanics(IAtomicVariable<int> hitPoints, IAtomicEvent<int> takeDamage, IAtomicAction<Entity> deathEvent, Entity entity)
+        public HitMechanics(IAtomicVariable<int> hitPoints, IAtomicEvent<int> takeDamage, IAtomicAction<IEntity> deathEvent, IEntity entity)
         {
             _hitPoints = hitPoints;
             _hitEvent = takeDamage;

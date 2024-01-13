@@ -14,7 +14,6 @@ namespace ZombieShooter
         public AtomicValue<float> LifeTime = new(5);
         
         private BulletCollisionMechanics _bulletCollisionMechanics;
-
         private Countdown _countdown;
         private BulletPool _pool;
 

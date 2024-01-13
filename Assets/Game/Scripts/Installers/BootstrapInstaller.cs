@@ -1,3 +1,4 @@
+using Atomic;
 using UnityEngine;
 using Zenject;
 using ZombieShooter;
@@ -16,7 +17,7 @@ namespace ShootEmUp
             Container.Bind<GameManagerInstaller>().FromInstance(_gameManagerInstaller).AsSingle();
             
             Container.BindInterfacesTo<CharacterEntity>().FromInstance(_characterEntity).AsCached();
-            Container.Bind<Entity>().FromInstance(_characterEntity).AsCached();
+            Container.Bind<Entity>().FromInstance(_characterEntity).AsSingle();
 
             Container.BindInterfacesTo<InputSystemManager>().AsSingle();
             Container.BindInterfacesTo<MoveController>().AsSingle();

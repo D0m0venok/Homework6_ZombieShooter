@@ -1,3 +1,6 @@
+using Atomic;
+using UnityEngine;
+
 namespace ZombieShooter
 {
     public abstract class UnitEntity : Entity, IGameUpdateListener,

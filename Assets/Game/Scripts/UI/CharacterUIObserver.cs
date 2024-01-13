@@ -1,13 +1,15 @@
+using Atomic;
+
 namespace ZombieShooter
 {
     public sealed class CharacterUIObserver : IGameFinishListener
     {
-        private readonly Entity _character;
+        private readonly IEntity _character;
         private readonly CharacterUI _characterUI;
         private readonly ZombieManager _zombieManager;
         private readonly int _maxBullets;
 
-        public CharacterUIObserver(Entity character, CharacterUI characterUI, ZombieManager zombieManager)
+        public CharacterUIObserver(IEntity character, CharacterUI characterUI, ZombieManager zombieManager)
         {
             _character = character;
             _characterUI = characterUI;

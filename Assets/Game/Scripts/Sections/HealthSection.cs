@@ -6,7 +6,7 @@ namespace ZombieShooter
     [Serializable]
     public sealed class HealthSection
     {
-        public AtomicEvent<Entity> DeathEvent;
+        public AtomicEvent<IEntity> DeathEvent;
         public AtomicEvent<int> HitEvent;
         public AtomicVariable<int> HitPoints = new(5);
         public AtomicVariable<bool> IsAlive = new(true);
@@ -15,7 +15,7 @@ namespace ZombieShooter
         private DeathMechanics _deathMechanics;
         private int _startHitPoints;
 
-        public void Init(Entity entity)
+        public void Init(IEntity entity)
         {
             _takeDamageMechanics = new HitMechanics(HitPoints, HitEvent, DeathEvent, entity);
             _deathMechanics = new DeathMechanics(IsAlive, DeathEvent);

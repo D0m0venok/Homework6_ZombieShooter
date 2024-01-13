@@ -14,7 +14,7 @@ namespace ZombieShooter
 
         public void OnCollisionEnter(Collision collider)
         {
-            var entity = collider.gameObject.GetComponentInParent<Entity>();
+            var entity = collider.gameObject.GetComponentInParent<IEntity>();
             
             if (entity != null)
                 if (entity.TryGetEntityComponent(out IHealthComponent healthComponent))

@@ -1,3 +1,4 @@
+using Atomic;
 using UnityEngine;
 using Zenject;
 
@@ -24,5 +25,7 @@ namespace ZombieShooter
             
             AddEntityComponent(new MeleeAttackAnimationComponent(_zombieCore.MeleeAttackSector.MeleeAttackEvent));
         }
+        
+        
     }
 }

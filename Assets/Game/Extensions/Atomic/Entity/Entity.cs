@@ -1,9 +1,10 @@
 using System.Collections.Generic;
 using UnityEngine;
+using ZombieShooter;
 
-namespace ZombieShooter
+namespace Atomic
 {
-    public class Entity : MonoBehaviour
+    public class Entity : MonoBehaviour, IEntity
     {
         private readonly List<object> _components = new();
         
@@ -36,7 +37,7 @@ namespace ZombieShooter
             element = default;
             return false;
         }
-        public object[] GetAll()
+        public object[] GetAllComponents()
         {
             return _components.ToArray();
         }
